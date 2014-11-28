@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:form>
+<h1>Editar Contas</h1><br />
+		<h:outputText value="N° Conta: " />
+		<h:inputText value="#{controleConta.conta.conta}"  /><br />
+		<h:outputText value="CPF: " />
+		<h:inputText value="#{controleConta.conta.cpf}" /><br />
+		<h:outputText value="Nome: " />
+		<h:inputText value="#{controleConta.conta.nome}" /><br />
+		<h:outputText value="Saldo: " />
+		<h:inputText value="#{controleConta.conta.saldo}" /><br />
+		<h:commandButton value="Salvar Conta" action="#{controleConta.salvar()}" />
+</h:form>
+</html>
