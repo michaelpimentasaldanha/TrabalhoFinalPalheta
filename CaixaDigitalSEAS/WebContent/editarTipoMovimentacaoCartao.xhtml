@@ -1,0 +1,16 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:form>
+<h1>Editar Tipo de movimentacao</h1><br />
+		<h:outputText value="N° Conta: " />
+		<h:inputText value="#{controleTipoMovimentacaoCartao.tipoMovimentacaoCartao.descricaoMovimentacao}"  /><br />
+		<h:commandButton value="Salvar Tipo de Movimentacao" action="#{controleTipoMovimentacaoCartao.salvar()}" />
+		<br /><h:link value="Menu" outcome="index" />
+</h:form>
+</html>

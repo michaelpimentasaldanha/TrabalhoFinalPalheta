@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:form>
+<h1>Cadastro de Movimentacacao</h1><br />
+		<h:outputText value="Id Cartao: " />
+		<h:inputText value="#{controleMovimentacaoCartao.movimentacaoCartao.cartao}"  /><br /><br />
+		<h:outputText value="Descrição Tipo Movimentacao: " />
+		<h:inputText value="#{controleMovimentacaoCartao.movimentacaoCartao.tipoMovimentacaoCartao.idTipoMovimentacao}"  /><br /><br />
+		<h:commandButton value="Salvar Movimentacao" action="#{controleMovimentacaoCartao.salvar()}" /><br /><br />
+		<h:outputText value="No campo (Descrição Tipo Movimentacao) usar: "/><br /><br />
+		<h:outputText value="   1 - NUCLEO "/><br />
+		<h:outputText value="   2 - SEAS "/><br />
+		<h:outputText value="   3 - TITULAR "/><br />
+</h:form>
+</html>

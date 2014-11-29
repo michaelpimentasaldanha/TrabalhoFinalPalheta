@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:form>
+<br />
+<h1>Lista de Tipos de Movimentacao</h1>
+<br />
+<h:dataTable value="#{controleTipoMovimentacaoCartao.tipoMovimentacaoCartaos}" var="tipoMovimentacaoCartao" border="1">
+	<h:column>
+		<f:facet name="header">ID TIPO DE MOVIMENTACAO</f:facet>
+		#{tipoMovimentacaoCartao.idTipoMovimentacao}
+	</h:column>
+	<h:column>
+		<f:facet name="header">DESCRICAO</f:facet>
+		#{tipoMovimentacaoCartao.descricaoMovimentacao}
+	</h:column>
+	<h:column>
+		<f:facet name="header">EDITAR</f:facet>
+		<h:commandLink action="#{controleTipoMovimentacaoCartao.editar()}">Editar
+			<f:setPropertyActionListener target="#{controleTipoMovimentacaoCartao.tipoMovimentacaoCartao}" value="#{tipoMovimentacaoCartao}" />
+		</h:commandLink>
+	</h:column>
+		<h:column>
+		<f:facet name="header">REMOVER</f:facet>
+		<h:commandLink action="#{controleTipoMovimentacaoCartao.remover}">Remover
+			<f:setPropertyActionListener target="#{controleTipoMovimentacaoCartao.tipoMovimentacaoCartao}" value="#{tipoMovimentacaoCartao}" />
+		</h:commandLink>
+	</h:column>
+</h:dataTable>
+<br />
+<h:commandButton value="Cadastrar novo tipo de Movimentacao" action="#{controleTipoMovimentacaoCartao.novo}"/>
+<br /><h:link value="Menu" outcome="index" />
+</h:form>
+</html>

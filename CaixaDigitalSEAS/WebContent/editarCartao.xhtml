@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:form>
+<h1>Editar Cartões</h1><br />
+		<h:outputText value="N° Cartao: " />
+		<h:inputText value="#{controleCartao.cartao.numeroCartao}"  /><br />
+		<h:outputText value="Via: " />
+		<h:inputText value="#{controleCartao.cartao.viaCartao}" /><br />
+		<h:outputText value="CPF: " />
+		<h:inputText value="#{controleCartao.cartao.cpfCartao}" /><br />
+		<h:outputText value="Nome Cartao: " />
+		<h:inputText value="#{controleCartao.cartao.nomeCartao}" /><br />
+		<h:commandButton value="Salvar Cartão" action="#{controleCartao.salvar()}" />
+</h:form>
+</html>

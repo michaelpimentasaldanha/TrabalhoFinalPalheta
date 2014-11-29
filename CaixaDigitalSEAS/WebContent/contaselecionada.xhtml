@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:form>
+<br />
+<h1>Consulta de Saldo</h1>
+<br />
+<h:outputText value="IdConta: #{controleConta.conta.id}" /><br />
+<h:outputText value="Conta: #{controleConta.conta.conta}" /><br />
+<h:outputText value="CPF: #{controleConta.conta.cpf}" /><br />
+<h:outputText value="Nome: #{controleConta.conta.nome}" /><br />
+<h:outputText value="Saldo: R$ #{controleConta.conta.saldo}" /><br />
+
+<br />
+<h:link value="Lista de Contas" outcome="listadecontas"/><br />
+<h:link value="Menu" outcome="index"/>
+</h:form>
+</html>

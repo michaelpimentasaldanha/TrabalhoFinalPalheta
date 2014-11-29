@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:form>
+<br />
+<h1>Lista de Movimentacao</h1>
+<br />
+<h:dataTable value="#{controleMovimentacaoCartao.movimentacaoCartaos}" var="movimentacaoCartao" border="1">
+	<h:column>
+		<f:facet name="header">ID CARTAO</f:facet>
+		#{movimentacaoCartao.cartao.idCartao}
+	</h:column>
+	<h:column>
+		<f:facet name="header">LOCAL</f:facet>
+		#{movimentacaoCartao.tipoMovimentacaoCartao.idTipoMovimentacao}
+	</h:column>
+	<h:column>
+		<h:commandLink action="#{controleMovimentacaoCartao.editar()}">Editar
+			<f:setPropertyActionListener target="#{controleMovimentacaoCartao.movimentacaoCartao}" value="#{movimentacaoCartao}" />
+		</h:commandLink>
+	</h:column>
+		<h:column>
+		<h:commandLink action="#{controleMovimentacaoCartao.remover}">Remover
+			<f:setPropertyActionListener target="#{controleMovimentacaoCartao.movimentacaoCartao}" value="#{movimentacaoCartao}" />
+		</h:commandLink>
+	</h:column>
+</h:dataTable>
+<br />
+<h:commandButton value="Cadastrar nova Movimentacao" action="#{controleMovimentacaoCartao.novo}"/>
+<br /><h:link value="Menu" outcome="index" />
+</h:form>
+</html>

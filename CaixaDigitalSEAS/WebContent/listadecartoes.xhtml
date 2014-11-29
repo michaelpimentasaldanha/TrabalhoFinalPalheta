@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:form>
+<br />
+<h1>Lista de Cartões</h1>
+<br />
+<h:dataTable value="#{controleCartao.cartoes}" var="cartao" border="1">
+	<h:column>
+		<f:facet name="header">NRO CARTAO</f:facet>
+		#{cartao.numeroCartao}
+	</h:column>
+	<h:column>
+		<f:facet name="header">VIA</f:facet>
+		#{cartao.viaCartao}
+	</h:column>
+	<h:column>
+		<f:facet name="header">CPF</f:facet>
+		#{cartao.cpfCartao}
+	</h:column>
+	<h:column>
+		<f:facet name="header">Nome Titular</f:facet>
+		#{cartao.nomeCartao}
+	</h:column>
+	<h:column>
+		<h:commandLink action="#{controleCartao.editar()}">Editar
+			<f:setPropertyActionListener target="#{controleCartao.cartao}" value="#{cartao}" />
+		</h:commandLink>
+	</h:column>
+		<h:column>
+		<h:commandLink action="#{controleCartao.remover}">Remover
+			<f:setPropertyActionListener target="#{controleCartao.cartao}" value="#{cartao}" />
+		</h:commandLink>
+	</h:column>
+</h:dataTable>
+<br />
+<h:commandButton value="Cadastrar novo usuario" action="#{controleCartao.novo}"/>
+<br /><h:link value="Menu" outcome="index" />
+</h:form>
+</html>
